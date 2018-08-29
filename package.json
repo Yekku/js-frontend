@@ -1,0 +1,26 @@
+{
+  "name": "js-frontend",
+  "version": "1.0.0",
+  "description": "Complete js-frontend course",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yekku/js-frontend.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "FrontEnd"
+  ],
+  "author": "Yekku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yekku/js-frontend/issues"
+  },
+  "homepage": "https://github.com/Yekku/js-frontend#readme",
+  "dependencies": {
+    "hexlet-pairs-data": "^1.0.8"
+  }
+}
