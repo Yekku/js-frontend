@@ -20,8 +20,8 @@ const numbers2 = l(3, 2, 9);
 concat(numbers, numbers2); // (3, 4, 5, 8, 3, 2, 9)
  */
 
-// BEGIN (write your solution here)
-const has = (list, value) => {/*? has */
+
+const has = (list, value) => {
   if (!isEmpty(list)) return false;
   if (head(list) === value) return true;
   return has(tail(list, value));
@@ -41,12 +41,11 @@ const concat = (list1, list2) => {
 
   return cons(head(list1), concat(tail(list1), list2));
 };
-// END
 
 //teacher's
 
 // BEGIN
-export const has = (list, element) => {
+/* export const has = (list, element) => {
   if (isEmpty(list)) {
     return false;
   }
@@ -71,4 +70,14 @@ export const concat = (list1, list2) => {
 
   return cons(head(list1), concat(tail(list1), list2));
 };
-// END
+// END */
+
+const pi = 3.14;
+const sum = (a, b) => a + b;
+
+const list = l('random', pi, sum(16, 2), 3);
+const newlist = cons(57, list);
+
+head(newlist) === 57;
+head(tail(tail(list))) === 18;
+head(tail(tail(newlist))) === 3.14;

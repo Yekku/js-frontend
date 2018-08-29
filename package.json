@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "Complete js-frontend course",
   "main": "dist/index.js",
+  "bin": {
+    "list-task": "dist/bin/list-task.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "eslint": "eslint",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +30,19 @@
     "url": "https://github.com/Yekku/js-frontend/issues"
   },
   "homepage": "https://github.com/Yekku/js-frontend#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
   "dependencies": {
-    "hexlet-pairs-data": "^1.0.8"
+    "hexlet-pairs-data": "^1.0.8",
+    "hexlet-pairs": "^1.0.8"
   }
 }
