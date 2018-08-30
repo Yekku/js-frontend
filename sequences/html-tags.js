@@ -73,7 +73,7 @@ const processedDom = map((element) => {
 
 //<h1>emehcs</h1>
 //<p>psil a si</p>
-  console.log(htmlToString(mirror(dom3)));
+htmlToString(mirror(dom3));
 
 /* ========================================= */
 
@@ -92,3 +92,32 @@ export const b2p = (elements) => {
 
   return cons(newElement, b2p(tail(elements)));
 };
+
+// teacher's
+
+// BEGIN
+// Рекурсивный процесс
+// export const map = (func, elements) => {
+//   if (isEmpty(elements)) {
+//     return l();
+//   }
+
+//   return cons(func(head(elements)), map(func, tail(elements)));
+// };
+
+// Итеративный процесс (рекурсивно)
+// export const map = (func, elements) => {
+//   const iter = (items, acc) => {
+//     if (isEmpty(items)) {
+//       return reverse(acc);
+//     }
+//     return iter(tail(items), cons(func(head(items)), acc));
+//   };
+
+//   return iter(elements, l());
+// };
+
+// export const mirror = elements => (
+//   map(element => node(name(element), reverseStr(value(element))), elements)
+// );
+// END
