@@ -42,7 +42,8 @@
     "eslint-plugin-import": "^2.14.0"
   },
   "dependencies": {
-    "hexlet-pairs-data": "^1.0.8",
-    "hexlet-pairs": "^1.0.8"
+    "hexlet-html-tags": "^0.2.8",
+    "hexlet-pairs": "^1.0.8",
+    "hexlet-pairs-data": "^1.0.8"
   }
 }

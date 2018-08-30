@@ -41,7 +41,7 @@ toString(append(make(), node('p', 'this is Sparta!')));
 // <p>this is Sparta!</p>
 Экспортируйте все созданные функции.
 */
-const make = () => l();
+export const make = () => l();
 // BEGIN (write your solution here)
 export const append = (dom, element) => consList(element, dom);
 
