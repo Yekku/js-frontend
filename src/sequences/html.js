@@ -59,11 +59,11 @@ export const toString = (elements) => {
   return `${toString(tail(elements))}<${tag}>${value(element)}</${tag}>`;
 };
 // END
-const tag = node("div", "what is love?");
+const tag = node('div', 'what is love?');
 const dom1 = make();
-const dom2 = append(dom1, node("h1", "hello, world"));
-const dom3 = append(dom2, node("h2", "header2"));
-const tag2 = node("h3", "header3");
+const dom2 = append(dom1, node('h1', 'hello, world'));
+const dom3 = append(dom2, node('h2', 'header2));
+const tag2 = node('h3', 'header3');
 const dom = append(dom3, tag2);
 toString(dom);
 console.log(toString(dom));
