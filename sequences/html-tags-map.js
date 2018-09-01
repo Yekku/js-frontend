@@ -1,6 +1,6 @@
 import { l, isEmpty, head, tail, cons, reverse, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
 import { name, value, node, is, toString as htmlToString } from 'hexlet-html-tags'; // eslint-disable-line
-import { reverse as reverseStr } from '../functions/strings';
+import { reverse as reverseStr } from '../utils/strings';
 import { append, make } from './html'
 
 
@@ -68,12 +68,13 @@ const processedDom = map((element) => {
   }
   return element;
 }, dom3);
+console.log("Change h1 to h2 => " + htmlToString(processedDom));
 
 /* ========================================= */
 
 //<h1>emehcs</h1>
 //<p>psil a si</p>
-htmlToString(mirror(dom3));
+console.log("Function mirror => " + htmlToString(mirror(dom3)));
 
 /* ========================================= */
 

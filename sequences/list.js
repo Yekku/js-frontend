@@ -44,8 +44,9 @@ const concat = (list1, list2) => {
 
 //teacher's
 
-// BEGIN
-/* export const has = (list, element) => {
+/*
+// BEGIN 
+export const has = (list, element) => {
   if (isEmpty(list)) {
     return false;
   }
@@ -70,7 +71,8 @@ export const concat = (list1, list2) => {
 
   return cons(head(list1), concat(tail(list1), list2));
 };
-// END */
+// END 
+*/
 
 const pi = 3.14;
 const sum = (a, b) => a + b;
