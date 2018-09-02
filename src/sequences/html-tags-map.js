@@ -6,9 +6,15 @@ import { append, make } from './html';
 
 /*
 html - tags.js
-Реализуйте и экспортируйте функцию map для библиотеки html - tags.Реализация должна быть построена с использованием итеративного процесса(без циклов, на основе рекурсии).Эта функция подобна той что описывалась в теории для списков, только текущая реализация работает с html - списком.Параметры и их порядок у функций аналогичный.Первый - функция - трансформер, второй - коллекция(в нашем случае список html - тегов).
+Реализуйте и экспортируйте функцию map для библиотеки html - tags.
+Реализация должна быть построена с использованием итеративного процесса
+(без циклов, на основе рекурсии).
+Эта функция подобна той что описывалась в теории для списков,
+только текущая реализация работает с html - списком.
+Параметры и их порядок у функций аналогичный.Первый - функция - трансформер, второй - коллекция
+(в нашем случае список html - тегов).
 
-  import { make, append, node, value, is } from 'hexlet-html-tags';
+import { make, append, node, value, is } from 'hexlet-html-tags';
 
 const dom1 = make();
 const dom2 = append(dom1, node('h1', 'scheme'));
@@ -21,7 +27,8 @@ const processedDom = map((element) => {
   }
   return element;
 }, dom3);
-Реализуйте и экспортируйте функцию mirror, которая переворачивает содержимое тегов, так чтобы читать его нужно было справа налево, а не слева направо.
+Реализуйте и экспортируйте функцию mirror, которая переворачивает содержимое тегов,
+так чтобы читать его нужно было справа налево, а не слева направо.
 
   import { make, append, node, value, is, toString as htmlToString } from 'hexlet-html-tags';
 
@@ -35,10 +42,12 @@ htmlToString(mirror(dom3));
 Экспортируйте все созданные функции.
 
   Примечание
-Функцию b2p можно использовать для наглядного сопоставления частного варианта операции отображения с обобщённой реализацией операции отображения(собственно, map).
+Функцию b2p можно использовать для наглядного сопоставления частного варианта операции
+отображения с обобщённой реализацией операции отображения(собственно, map).
 
   Подсказки
-Функция reverseStr(псевдоним функции reverse из модуля по работе со строками strings) делает переворот строки.
+Функция reverseStr(псевдоним функции reverse из модуля по работе со строками strings)
+делает переворот строки.
 */
 
 // BEGIN (write your solution here)
@@ -53,7 +62,9 @@ export const map = (func, list) => {
   return iter(list, l());
 };
 
-export const mirror = elements => map(element => node(name(element), reverseStr(value(element))), elements);
+export const mirror = (elements) => {
+  map(element => node(name(element), reverseStr(value(element))), elements);
+};
 // END
 /* ========================================= */
 
@@ -68,13 +79,13 @@ const processedDom = map((element) => {
   }
   return element;
 }, dom3);
-console.log("Change h1 to h2 => " + htmlToString(processedDom));
+console.log(`Change h1 to h2 => ${htmlToString(processedDom)}`);
 
 /* ========================================= */
 
-//<h1>emehcs</h1>
-//<p>psil a si</p>
-console.log("Function mirror => " + htmlToString(mirror(dom3)));
+// <h1>emehcs</h1>
+// <p>psil a si</p>
+console.log(`Function mirror => ${htmlToString(mirror(dom3))}`);
 
 /* ========================================= */
 

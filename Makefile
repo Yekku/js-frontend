@@ -1,6 +1,6 @@
 install: install-deps install-flow-typed
 
-run:
+run-list:
 	npx babel-node -- 'src/bin/list-task.js' 10
 
 install-deps:

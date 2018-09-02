@@ -1,3 +1,5 @@
-export const identity = str => str;
+const identity = str => str;
 
-export const reverse = str => str.split("").reverse().join("");
+const reverse = str => str.split('').reverse().join('');
+
+export default { identity, reverse };

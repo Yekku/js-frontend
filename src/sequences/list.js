@@ -1,36 +1,46 @@
 import { l, cons, head, tail, isEmpty, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
 
 /**
- * Все создаваемые функции, в рамках этого задания, должны быть реализованы независимо друг от друга, то есть их нельзя использовать для реализации друг друга.
+Все создаваемые функции, в рамках этого задания, должны быть реализованы независимо друг от друга,
+то есть их нельзя использовать для реализации друг друга.
 
 list.js
-Реализуйте и экспортируйте функцию has, которая проверяет, является ли переданное значение элементом списка.
+Реализуйте и экспортируйте функцию has, которая проверяет,
+является ли переданное значение элементом списка.
 
 const numbers = l(3, 4, 5, 8);
 has(numbers, 8); // true
 has(numbers, 0); // false
-Реализуйте и экспортируйте функцию reverse, которая переворачивает список, используя итеративный процесс.
+
+Реализуйте и экспортируйте функцию reverse, которая переворачивает список,
+используя итеративный процесс.
 
 const numbers = l(3, 4, 5);
 reverse(numbers); // (5, 4, 3)
-Реализуйте и экспортируйте функцию concat, которая соединяет два списка, используя рекурсивный процесс (попробуйте сначала представить, как работала бы функция copy, которая принимает на вход список и возвращает его копию).
+
+Реализуйте и экспортируйте функцию concat, которая соединяет два списка,
+используя рекурсивный процесс (попробуйте сначала представить,
+как работала бы функция copy, которая принимает на вход список и возвращает его копию).
 
 const numbers = l(3, 4, 5, 8);
 const numbers2 = l(3, 2, 9);
 concat(numbers, numbers2); // (3, 4, 5, 8, 3, 2, 9)
  */
 
-
+// BEGIN
 const has = (list, value) => {
   if (!isEmpty(list)) return false;
   if (head(list) === value) return true;
   return has(tail(list, value));
 };
 
-const reverse = list => {
-  const iter = (items, acc) =>
-    isEmpty(items) ? acc : iter(tail(items), cons(head(items), acc));
-
+const reverse = (list) => {
+  const iter = (items, acc) => {
+    if (isEmpty(items)) {
+      return acc;
+    }
+    return iter(tail(items), cons(head(items), acc));
+  };
   return iter(list, l());
 };
 
@@ -42,10 +52,16 @@ const concat = (list1, list2) => {
   return cons(head(list1), concat(tail(list1), list2));
 };
 
-//teacher's
+export default { has, reverse, concat };
+// END
+
+const numbers = l(3, 4, 5);
+console.log(listToString(reverse(numbers))); // (5, 4, 3)
+
+// teacher's
 
 /*
-// BEGIN 
+// BEGIN
 export const has = (list, element) => {
   if (isEmpty(list)) {
     return false;
@@ -71,15 +87,5 @@ export const concat = (list1, list2) => {
 
   return cons(head(list1), concat(tail(list1), list2));
 };
-// END 
+// END
 */
-
-const pi = 3.14;
-const sum = (a, b) => a + b;
-
-const list = l('random', pi, sum(16, 2), 3);
-const newlist = cons(57, list);
-
-head(newlist) === 57;
-head(tail(tail(list))) === 18;
-head(tail(tail(newlist))) === 3.14;

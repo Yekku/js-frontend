@@ -1,12 +1,16 @@
 import { l, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
 import { make, append, node, value, is, name, toString as htmlToString, map, filter, reduce } from 'hexlet-html-tags'; // eslint-disable-line
-import { wc } from '../utils/utils'; // eslint-disable-line
+import wc from '../utils/utils'; // eslint-disable-line
 
 /*
 html - tags.js
-Реализуйте и экспортируйте функцию extractHeaders, которая извлекает тексты всех заголовков h2 из переданного html и возвращает html в котором каждый из этих текстов обернут в p.
+Реализуйте и экспортируйте функцию extractHeaders,
+которая извлекает тексты всех заголовков h2 из переданного html и возвращает html
+в котором каждый из этих текстов обернут в p.
 
-Например такой html в строковом представлении < h2 > header1</h2 > <h2>header2</h2> <p>content</p> превратится в такой < p > header1</p > <p>header2</p>.Ниже развернутый пример.
+Например такой html в строковом представлении
+< h2 > header1</h2 > <h2>header2</h2> <p>content</p> превратится в такой
+< p > header1</p > <p>header2</p>.Ниже развернутый пример.
 
   import { node, append, make, reduce, toString as htmlToString } from 'hexlet-html-tags';
 
@@ -17,7 +21,9 @@ const html3 = append(html2, node('p', 'content'));
 
 htmlToString(extractHeaders(html3));
 // => <p>header1</p><p>header2</p>
-Реализуйте и экспортируйте функцию wordsCount, которая считает вхождения слова в определенный тег.Для подсчета слов в тексте одного тега воспользуйтесь вспомогательной функцией wc, которая уже импортирована в модуль html - tags.
+Реализуйте и экспортируйте функцию wordsCount, которая считает вхождения слова в определенный тег.
+Для подсчета слов в тексте одного тега воспользуйтесь вспомогательной функцией wc,
+которая уже импортирована в модуль html - tags.
 
   import { make, append, node } from 'hexlet-html-tags';
 
@@ -28,18 +34,19 @@ const html4 = append(html3, node('p', 'content lisp'));
 
 wordsCount('h2', 'lisp', html4); // 3
 Подсказки
-Подсчет слов в тексте: wc(word, text), где word искомое слово, а text это текст, в котором ведется поиск.
+Подсчет слов в тексте: wc(word, text), где word искомое слово, а text это текст,
+в котором ведется поиск.
 */
 
 // BEGIN (write your solution here)
 export const extractHeaders = (dom) => {
   const filterHeaders = filter(item => is('h2', item), dom);
-  return map(element => node("p", value(element)), filterHeaders);
+  return map(element => node('p', value(element)), filterHeaders);
   // return map(element => {
-  //   if (is("h2", element)) {
-  //     return node("p", value(element));
-  //   }
-  //   return element;
+  //  if (is("h2", element)) {
+  //    return node("p", value(element));
+  //  }
+  //  return element;
   // }, dom);
 };
 
@@ -65,7 +72,7 @@ const html7 = append(html6, node('p', 'content lisp'));
 
 console.log(wordsCount('h2', 'lisp', html7)); // 3
 
-//teacher's
+// teacher's
 /**
  // BEGIN
 export const extractHeaders = (elements) => {

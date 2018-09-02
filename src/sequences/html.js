@@ -9,12 +9,17 @@ html - tags.js
 Реализуйте абстракцию для создания html.Она включает в себя следующие функции:
 
 make - конструктор.Уже реализован.Не принимает параметров, и создает html - список.
-  node - создает новый тег.Содержит два элемента, имя тега и его содержимое.Дополнительно реализуйте селекторы тега: name и value.
+node - создает новый тег.Содержит два элемента, имя тега и его содержимое.
+Дополнительно реализуйте селекторы тега: name и value.
+
 const tag = node('div', 'what is love?');
 name(tag); // => div
 value(tag); // => what is love?
-append - добавляет элемент(тег), созданный с помощью node, в html - список.Возвращает новый html - список.
-  toString - возвращает текстовое представление html на основании html - списка.
+
+append - добавляет элемент(тег), созданный с помощью node, в html - список.
+Возвращает новый html - список.
+
+toString - возвращает текстовое представление html на основании html - списка.
 Пример использования этого интерфейса:
 
 import { make, append, toString, node } from './html-tags';
@@ -59,17 +64,16 @@ export const toString = (elements) => {
   return `${toString(tail(elements))}<${tag}>${value(element)}</${tag}>`;
 };
 // END
-const tag = node('div', 'what is love?');
 const dom1 = make();
 const dom2 = append(dom1, node('h1', 'hello, world'));
-const dom3 = append(dom2, node('h2', 'header2));
-const tag2 = node('h3', 'header3');
-const dom = append(dom3, tag2);
+const dom3 = append(dom2, node('h2', 'header2'));
+const tag = node('h3', 'header3');
+const dom = append(dom3, tag);
 toString(dom);
 console.log(toString(dom));
-toString(append(make(), node("p", "this is Sparta!")));
+toString(append(make(), node('p', 'this is Sparta!')));
 
-//teacher's
+// teacher's
 /*
 // BEGIN
 export const append = (dom, element) => consList(element, dom);
