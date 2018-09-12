@@ -8,6 +8,24 @@ sumSquareDifference.js
 Напишите функцию sumSquareDifference, которая принимает аргумент n и возвращает
 разницу между квадратом суммы и суммой квадратов первых n натуральных чисел.
 */
+
 const sumSquareDifference = (n) => {
-  
+  const square = (n) => {
+    let result = 0;
+    for (let i = 0; i <= n; i += 1) {
+      result = i * i + square(n - 1);
+    }
+    return result;
+  };
+  const squareSum = (n) => {
+    let result = 0;
+    for (let i = 0; i <= n; i += 1) {
+      result = i + result;
+    }
+    result *= result;
+    return result;
+  };
+  return squareSum(n) - square(n);
 };
+
+console.log(sumSquareDifference(10));

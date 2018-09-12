@@ -28,13 +28,13 @@ concat(numbers, numbers2); // (3, 4, 5, 8, 3, 2, 9)
  */
 
 // BEGIN
-const has = (list, value) => {
+export const has = (list, value) => {
   if (!isEmpty(list)) return false;
   if (head(list) === value) return true;
   return has(tail(list, value));
 };
 
-const reverse = (list) => {
+export const reverse = (list) => {
   const iter = (items, acc) => {
     if (isEmpty(items)) {
       return acc;
@@ -44,7 +44,7 @@ const reverse = (list) => {
   return iter(list, l());
 };
 
-const concat = (list1, list2) => {
+export const concat = (list1, list2) => {
   if (isEmpty(list1)) {
     return list2;
   }
@@ -52,11 +52,8 @@ const concat = (list1, list2) => {
   return cons(head(list1), concat(tail(list1), list2));
 };
 
-export default { has, reverse, concat };
+// export default { has, reverse, concat };
 // END
-
-const numbers = l(3, 4, 5);
-console.log(listToString(reverse(numbers))); // (5, 4, 3)
 
 // teacher's
 
