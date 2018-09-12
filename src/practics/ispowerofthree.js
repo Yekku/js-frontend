@@ -4,6 +4,7 @@ isPowerOfThree.js
 которая определяет, является ли переданное число натуральной степенью тройки.
 Например, число 27 это третья степень(33), а 81 это четвертая(34).
 */
+/*
 const isPowerOfThree = (num) => {
   let acc = 1;
   while (num > acc) {
@@ -18,8 +19,10 @@ const isPowerOfThree = (num) => {
 };
 
 export default isPowerOfThree;
+*/
+
 // teacher's
-/*
+
 // BEGIN
 export default (num) => {
   let current = 1;
@@ -30,8 +33,8 @@ export default (num) => {
   return current === num;
 };
 // END
-*/
-console.log(isPowerOfThree(90));
-console.log(isPowerOfThree(1)); // true (3^0)
-console.log(isPowerOfThree(2)); // false
-console.log(isPowerOfThree(9)); // true (3^2)
+
+// console.log(isPowerOfThree(90));
+// console.log(isPowerOfThree(1)); // true (3^0)
+// console.log(isPowerOfThree(2)); // false
+// console.log(isPowerOfThree(9)); // true (3^2)

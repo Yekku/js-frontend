@@ -12,7 +12,8 @@ reduce((element, acc) => {
   return is('h1', element) ? acc + 1 : acc;
 }, 0, html3); // 2
 
-Реализуйте и экспортируйте функцию emptyTagsCount, которая считает количество пустых тегов. Тип тега задается первым параметром функции.
+Реализуйте и экспортируйте функцию emptyTagsCount, которая считает количество пустых тегов.
+Тип тега задается первым параметром функции.
 
 
 const html1 = make();
@@ -24,7 +25,8 @@ const html6 = append(html5, node('blockquote', 'quote'));
 
 emptyTagsCount('blockquote', html6); // 2
 Примечание
-Функцию headersCount можно использовать для наглядного сопоставления частного варианта свёртки с обобщённой реализацией операции отображения (собственно, reduce).
+Функцию headersCount можно использовать для наглядного сопоставления
+частного варианта свёртки с обобщённой реализацией операции отображения (собственно, reduce).
 */
 
 // BEGIN (write your solution here)
@@ -37,7 +39,7 @@ export const reduce = (func, acc, elements) => {
 };
 
 export const emptyTagsCount = (tagName, elements) => {
-  const predicate = element => is(tagName, element) && value(element) === "";
+  const predicate = element => is(tagName, element) && value(element) === '';
   const func = (element, acc) => (predicate(element) ? acc + 1 : acc);
   return reduce(func, 0, elements);
 };
@@ -56,32 +58,29 @@ const headersCount = (tagName, elements) => {
   return iter(elements, 0);
 };
 
-// // // //
-const html11 = append(make(), node("h1", "header1"));
-const html12 = append(html11, node("h1", "header2"));
-const html13 = append(html12, node("p", "content"));
-
-const check = reduce(
-  (element, acc) => {
-    return is("h1", element) ? acc + 1 : acc;
-  },
-  0,
-  html13
-); // 2
-
-console.log("How many tag h1 => " + check);
+console.log(headersCount);
 
 // // // //
+const html11 = append(make(), node('h1', 'header1'));
+const html12 = append(html11, node('h1', 'header2'));
+const html13 = append(html12, node('p', 'content'));
+
+const check = () => {
+  reduce((element, acc) => (is('h1', element) ? acc + 1 : acc), 0, html13);
+}; // 2
+
+console.log(`How many tag h1${check}`);
+
 const html21 = make();
-const html22 = append(html21, node("h1", "scheme"));
-const html23 = append(html22, node("p", "is a lisp"));
-const html24 = append(html23, node("blockquote", ""));
-const html25 = append(html24, node("blockquote", ""));
-const html26 = append(html25, node("blockquote", "quote"));
+const html22 = append(html21, node('h1', 'scheme'));
+const html23 = append(html22, node('p', 'is a lisp'));
+const html24 = append(html23, node('blockquote', ''));
+const html25 = append(html24, node('blockquote', ''));
+const html26 = append(html25, node('blockquote', 'quote'));
 
-console.log("How many empty tag => " + emptyTagsCount("blockquote", html26)); // 2
+console.log(`How many empty tag => ${emptyTagsCount('blockquote', html26)}`); // 2
 
-//teacher's
+// teacher's
 /*
 // BEGIN
 export const reduce = (func, acc, elements) => {

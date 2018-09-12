@@ -16,17 +16,17 @@ const result = zip(list1, list2);
 */
 
 // BEGIN (write your solution here)
-const zip = (list1, list2) => {
-  
-};
+// const zip = (list1, list2) => {
 
-export default zip;
+// };
+
+// export default zip;
 // END
 
-const list1 = l(1, 5, 3, 8, 9);
-const list2 = l(2, 3, 2, 1);
+// const list1 = l(1, 5, 3, 8, 9);
+// const list2 = l(2, 3, 2, 1);
 
 //  ((1, 2), (5, 3), (3, 2), (8, 1))
-const result = zip(list1, list2);
+// const result = zip(list1, list2);
 
-console.log(listToString(result));
+// console.log(listToString(result));

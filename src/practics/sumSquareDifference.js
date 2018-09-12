@@ -10,16 +10,16 @@ sumSquareDifference.js
 */
 
 const sumSquareDifference = (n) => {
-  const square = (n) => {
+  const square = (num) => {
     let result = 0;
     for (let i = 0; i <= n; i += 1) {
-      result = i * i + square(n - 1);
+      result = i * i + square(num - 1);
     }
     return result;
   };
-  const squareSum = (n) => {
+  const squareSum = (num2) => {
     let result = 0;
-    for (let i = 0; i <= n; i += 1) {
+    for (let i = 0; i <= num2; i += 1) {
       result = i + result;
     }
     result *= result;
