@@ -1,5 +1,8 @@
+#
+
 [![Build Status](https://travis-ci.org/Yekku/js-frontend.svg?branch=master)](https://travis-ci.org/Yekku/js-frontend)
-# js-frontend and back-end
+
+## js-frontend and back-end
 
 This repository is created and maintained by participant of the team and the community of Hexlet, an educational project.
 
