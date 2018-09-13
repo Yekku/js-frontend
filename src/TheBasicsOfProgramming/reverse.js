@@ -1,4 +1,4 @@
-import length from '../utils/strings';
+import { length } from '../utils/strings';
 
 /**
 Задание
