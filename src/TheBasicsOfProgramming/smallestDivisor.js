@@ -57,3 +57,40 @@ const smallestDivisor = (num) => {
 export default smallestDivisor;
 // END
 */
+
+/* =====================================================
+Задание
+×
+smallestDivisor.js
+Реализуйте и экспортируйте по умолчанию функцию smallestDivisor,
+используя итеративный процесс (императивно).
+Функция должна находить минимальный делитель переданного числа.
+
+Для этого достаточно последовательно проверять делимость, начиная с двойки.
+Если делитель не найден, значит число простое, и делителем является само число.
+
+Если переданное число меньше единицы, то функция должна вернуть NaN.
+
+smallestDivisor(15); // 3
+smallestDivisor(17); // 17
+
+smallestDivisor(0); // NaN
+smallestDivisor(-3); // NaN
+*/
+
+// BEGIN (write your solution here)
+const smallestDivisor = (num) => {
+  if (num < 1) {
+    return NaN;
+  }
+  if (num === 1) {
+    return 1;
+  }
+  let divisor = 2;
+  while (num % divisor !== 0) {
+    divisor += 1;
+  }
+  return divisor;
+};
+// END
+console.log(smallestDivisor(-3)); // NaN
