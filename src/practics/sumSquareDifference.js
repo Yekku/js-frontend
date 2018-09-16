@@ -9,23 +9,57 @@ sumSquareDifference.js
 разницу между квадратом суммы и суммой квадратов первых n натуральных чисел.
 */
 
+// BEGIN (write your solution here) (write your solution here)
 const sumSquareDifference = (n) => {
   const square = (num) => {
     let result = 0;
-    for (let i = 0; i <= n; i += 1) {
-      result = i * i + square(num - 1);
+    let i = 0;
+    while (i <= num) {
+      result += i * i;
+      i += 1;
     }
     return result;
   };
-  const squareSum = (num2) => {
+  const squareSum = (nb) => {
     let result = 0;
-    for (let i = 0; i <= num2; i += 1) {
-      result = i + result;
+    let i = 0;
+    while (i <= nb) {
+      result += i;
+      i += 1;
     }
     result *= result;
     return result;
   };
   return squareSum(n) - square(n);
 };
+// END
 
 console.log(sumSquareDifference(10));
+
+// Решение учителя
+/*
+sumSquareDifference.js
+// BEGIN (write your solution here)
+const sumOfSquares = (n) => {
+  let sum = 0;
+  let i = 1;
+  while (i <= n) {
+    sum += i * i;
+    i += 1;
+  }
+  return sum;
+};
+
+const squareOfSum = (n) => {
+  let sum = 0;
+  let i = 1;
+  while (i <= n) {
+    sum += i;
+    i += 1;
+  }
+  return sum * sum;
+};
+
+const sumSquareDifference = n => squareOfSum(n) - sumOfSquares(n);
+// END
+*/
