@@ -15,18 +15,25 @@ const result = zip(list1, list2);
 то длина результирующего списка равна длине короткого списка.
 */
 
-// BEGIN (write your solution here)
-// const zip = (list1, list2) => {
+// BEGIN
+const zip = (list1, list2) => {
+  const iter = (first, last, acc) => {
+    if (isEmpty(first) || isEmpty(last)) {
+      return acc;
+    }
 
-// };
+    const newAcc = cons(l(head(first), head(last)), acc);
+    return iter(tail(first), tail(last), newAcc);
+  };
 
-// export default zip;
+  return reverse(iter(list1, list2, l()));
+};
+
+export default zip;
 // END
 
-// const list1 = l(1, 5, 3, 8, 9);
-// const list2 = l(2, 3, 2, 1);
+const list1 = l(1, 5, 3, 8, 9);
+const list2 = l(2, 3, 2, 1);
 
 //  ((1, 2), (5, 3), (3, 2), (8, 1))
-// const result = zip(list1, list2);
-
-// console.log(listToString(result));
+console.log(listToString(zip(list1, list2)));

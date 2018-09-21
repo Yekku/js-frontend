@@ -29,9 +29,9 @@ concat(numbers, numbers2); // (3, 4, 5, 8, 3, 2, 9)
 
 // BEGIN
 export const has = (list, value) => {
-  if (!isEmpty(list)) return false;
+  if (isEmpty(list)) return false;
   if (head(list) === value) return true;
-  return has(tail(list, value));
+  return has(tail(list), value);
 };
 
 export const reverse = (list) => {
@@ -86,3 +86,14 @@ export const concat = (list1, list2) => {
 };
 // END
 */
+
+const numbers = l(3, 4, 5, 8);
+console.log(has(numbers, 8)); // true
+console.log(has(numbers, 0)); // false
+
+const numbers1 = l(3, 4, 5);
+console.log(listToString(reverse(numbers1))); // (5, 4, 3)
+
+const numbers2 = l(3, 4, 5, 8);
+const numbers3 = l(3, 2, 9);
+console.log(listToString(concat(numbers2, numbers3))); // (3, 4, 5, 8, 3, 2, 9)
