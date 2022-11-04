@@ -1,4 +1,11 @@
-import { l, cons, head, tail, isEmpty, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
+import {
+  l,
+  cons,
+  head,
+  tail,
+  isEmpty,
+  toString as listToString,
+} from "hexlet-pairs-data"; // eslint-disable-line
 
 /**
 Все создаваемые функции, в рамках этого задания, должны быть реализованы независимо друг от друга,

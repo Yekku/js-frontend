@@ -49,7 +49,6 @@ const bigLettersCount = (str) => {
 
 console.log(bigLettersCount('   Ad sd'));
 
-
 const compare = (first, second) => {
   const firstCount = bigLettersCount(first);
   const secondCount = bigLettersCount(second);
@@ -57,7 +56,8 @@ const compare = (first, second) => {
   // BEGIN (write your solution here)
   if (firstCount > secondCount) {
     return 1;
-  } if (secondCount > firstCount) {
+  }
+  if (secondCount > firstCount) {
     return -1;
   }
   return 0;

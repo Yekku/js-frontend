@@ -20,7 +20,8 @@ const isPerfect = (num) => {
       divisors += i;
       if (num === 0) {
         return false;
-      } if (num === divisors) {
+      }
+      if (num === divisors) {
         return true;
       }
     }

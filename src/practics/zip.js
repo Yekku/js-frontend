@@ -1,4 +1,12 @@
-import { l, isEmpty, head, tail, cons, reverse, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
+import {
+  l,
+  isEmpty,
+  head,
+  tail,
+  cons,
+  reverse,
+  toString as listToString,
+} from "hexlet-pairs-data"; // eslint-disable-line
 
 /**
 zip.js

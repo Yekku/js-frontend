@@ -1,8 +1,20 @@
-import { l, isEmpty, head, tail, cons, reverse, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
-import { name, value, node, is, toString as htmlToString } from 'hexlet-html-tags'; // eslint-disable-line
+import {
+  l,
+  isEmpty,
+  head,
+  tail,
+  cons,
+  reverse,
+} from "hexlet-pairs-data"; // eslint-disable-line
+import {
+  name,
+  value,
+  node,
+  is,
+  toString as htmlToString,
+} from "hexlet-html-tags"; // eslint-disable-line
 import { reverse as reverseStr } from '../utils/strings';
 import { append, make } from './html';
-
 
 /*
 html - tags.js

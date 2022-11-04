@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { l, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
+import { l, toString as listToString } from "hexlet-pairs-data"; // eslint-disable-line
 import { has, reverse, concat } from '../sequences/list';
 
 // console.log(`The result is: ${result}`);

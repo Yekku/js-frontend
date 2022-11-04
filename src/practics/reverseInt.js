@@ -14,10 +14,7 @@ reverseInt(-123); // -321
 const reverseInt = (num) => {
   let numer = Math.abs(num);
   numer += '';
-  let result = numer
-    .split('')
-    .reverse()
-    .join('');
+  let result = numer.split('').reverse().join('');
   result = Number(result);
   return num > 0 ? result : -result;
 };

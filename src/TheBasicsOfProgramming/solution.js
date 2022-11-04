@@ -39,7 +39,7 @@ const area = 4 * pi * r * r;
 
 // BEGIN (write your solution here)
 
-export const triangleArea = n => getTriangleArea(n, (square(n) / 2));
+export const triangleArea = n => getTriangleArea(n, square(n) / 2);
 
 // END
 

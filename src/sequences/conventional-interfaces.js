@@ -1,6 +1,16 @@
-import { l, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
-import { make, append, node, value, is, name, toString as htmlToString, map, filter, reduce } from 'hexlet-html-tags'; // eslint-disable-line
-import wc from '../utils/utils'; // eslint-disable-line
+import { l, toString as listToString } from "hexlet-pairs-data"; // eslint-disable-line
+import {
+  make,
+  append,
+  node,
+  value,
+  is,
+  toString as htmlToString,
+  map,
+  filter,
+  reduce,
+} from "hexlet-html-tags"; // eslint-disable-line
+import wc from "../utils/utils"; // eslint-disable-line
 
 /*
 html - tags.js

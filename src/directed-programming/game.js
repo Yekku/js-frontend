@@ -1,5 +1,11 @@
-import { cons, car, cdr, toString as pairToString } from 'hexlet-pairs'; // eslint-disable-line
-import { cons as consList, l, random, head, reverse, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
+import { cons, car, cdr, toString as pairToString } from "hexlet-pairs"; // eslint-disable-line
+import {
+  cons as consList,
+  l,
+  random,
+  head,
+  reverse,
+} from "hexlet-pairs-data"; // eslint-disable-line
 
 /**
 game.js
@@ -48,7 +54,9 @@ const run = (player1, player2, cards) => {
 
   const startHealth = 10;
   const logItem = cons(cons(startHealth, startHealth), 'Начинаем бой!');
-  return reverse(iter(startHealth, player1, startHealth, player2, 1, l(logItem)));
+  return reverse(
+    iter(startHealth, player1, startHealth, player2, 1, l(logItem)),
+  );
 };
 
 export default cards => (name1, name2) => run(name1, name2, cards);

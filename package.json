@@ -39,7 +39,9 @@
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.16.0"
+    "eslint-plugin-import": "^2.16.0",
+    "flow-bin": "^0.190.1",
+    "prettier": "^2.7.1"
   },
   "dependencies": {
     "hexlet-html-tags": "^0.2.8",

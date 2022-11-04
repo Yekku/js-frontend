@@ -25,7 +25,7 @@ const diff = (a, b) => {
     small = a;
   }
   const result1 = big - small;
-  const result2 = (360 - big) + small;
+  const result2 = 360 - big + small;
   if (result1 > result2) {
     return result2;
   }

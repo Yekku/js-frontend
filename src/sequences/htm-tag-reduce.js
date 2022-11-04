@@ -1,5 +1,15 @@
-import { isEmpty, head, tail, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
-import { make, append, node, value, is, toString as htmlToString } from 'hexlet-html-tags'; // eslint-disable-line
+import {
+  isEmpty,
+  head,
+  tail,
+} from "hexlet-pairs-data"; // eslint-disable-line
+import {
+  make,
+  append,
+  node,
+  value,
+  is,
+} from "hexlet-html-tags"; // eslint-disable-line
 
 /*
 Реализуйте и экспортируйте функцию reduce для библиотеки html-tags:

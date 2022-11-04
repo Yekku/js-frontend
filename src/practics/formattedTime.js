@@ -25,9 +25,11 @@ const formattedTime = (num) => {
   const correctTime = `${isHour}:${isMinute}`;
   if (isHour >= 10 && isMinute < 10) {
     return `${isHour}:0${isMinute}`;
-  } if (isHour < 10 && isMinute >= 10) {
+  }
+  if (isHour < 10 && isMinute >= 10) {
     return `0${isHour}:${isMinute}`;
-  } if (isHour < 10 && isMinute < 10) {
+  }
+  if (isHour < 10 && isMinute < 10) {
     return `0${isHour}:0${isMinute}`;
   }
   return correctTime;

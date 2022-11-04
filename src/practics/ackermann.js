@@ -29,7 +29,8 @@ const ackermann = (m, n) => {
   if (m < 0 || n < 0) return undefined;
   if (m === 0) {
     return n + 1;
-  } if (n === 0 && m > 0) {
+  }
+  if (n === 0 && m > 0) {
     return ackermann(m - 1, 1);
   }
 

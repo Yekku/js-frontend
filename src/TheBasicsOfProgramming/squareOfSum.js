@@ -9,7 +9,7 @@ squareOfSum(1, 10) // 121
  */
 
 // BEGIN (write your solution here)
-const squareOfSum = (a, b) => (a * a) + (2 * a * b) + (b * b);
+const squareOfSum = (a, b) => a * a + 2 * a * b + b * b;
 // END
 
 export default squareOfSum;
